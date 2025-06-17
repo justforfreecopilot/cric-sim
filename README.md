@@ -8,3 +8,18 @@ This lightweight web application demonstrates basic face detection and user atte
 4. **Users** – display a list of all saved users.
 
 All data is stored in the browser's local storage. The UI is mobile responsive and uses the [face-api.js](https://github.com/justadudewhohacks/face-api.js/) library loaded from a CDN.
+
+## Running with Docker
+
+To build and run the app inside a container:
+
+1. Build the image:
+   ```bash
+   docker build -t face-app .
+   ```
+2. Start the container and expose port 8090:
+   ```bash
+   docker run --rm -p 8090:8090 face-app
+   ```
+
+Then open `http://localhost:8090` in your browser.
